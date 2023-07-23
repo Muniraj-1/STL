@@ -1,0 +1,39 @@
+#include <iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+vector<vector<int>> matrix1 {{1,2,3},{1,2,3},{1,2,3}};
+vector<vector<int>> matrix2 {{1,1,1},{2,1,3},{3,2,2}};
+vector<vector<int>> result {{0,0,0},{0,0,0},{0,0,0}};
+
+
+int main()
+{
+    int row1 = 3,col1 = 3,row2 = 3,col2 = 3;           // get a row,column for two matrix
+
+
+    for(int i=0;i<row1;i++)                       // resultant matrix be (row1 x col2)
+    {
+        for(int j=0;j<col2;j++)
+        {
+            for(int k=0;k<col1;k++ )
+            {
+                result[i][j]+= matrix1[i][k]* matrix2[k][j];
+
+            }
+
+        }
+    }
+    for(int i=0;i<row1;i++)
+    {
+        for(int j=0;j<col2;j++)
+        {
+            cout<<result[i][j] << " ";                // display result matrix
+        }
+        cout<<"\n";
+    }
+
+
+    return 0;
+}
