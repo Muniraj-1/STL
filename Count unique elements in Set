@@ -1,0 +1,28 @@
+#include <iostream>
+#include<set>
+using namespace std;
+
+int counter = 0;
+int main()
+{
+
+    int range;
+    cin >> range;                      // get the range
+    int a[range];
+
+     for(int i=0;i<range;i++)
+    {
+      cin>>a[i];                       // get an array up to the range 
+    }
+    set<int> s;
+
+    for(int i=0;i<range;i++)
+    {
+       s.insert(a[i]);                // insert an array to the set
+
+    }
+
+   cout<<s.size();                  // get a size of the set. i.e Set always contains unique elements.There is no duplicate elements in set
+
+    return 0;
+}
