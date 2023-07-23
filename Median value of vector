@@ -1,0 +1,24 @@
+#include <iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+
+vector <int> v {1,2,3,4,5,7,2,8,9,10,11,12};
+int main()
+{
+
+    sort(v.begin(),v.end());                 // sort the vector
+    float median;
+    int x=v.size();
+    if(x%2 != 0)                           // if the size of vector is odd ,print the middle element of vector
+    {
+        cout<< "The median value is :" << v[x/2] << endl;
+    }
+    else{
+           median = v[x/2]+v[(x/2)-1] ;         // if size is even add the middle two elements and divide by 2
+
+         cout<< "The median value is :" <<median/2  << endl;      // print the median value
+    }
+    return 0;
+}
