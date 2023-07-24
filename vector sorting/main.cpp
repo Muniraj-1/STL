@@ -8,10 +8,10 @@ template<typename T>
 
 T sortVector(T v)
 {
-    sort(v.rbegin(),v.rend());
+    sort(v.rbegin(),v.rend());            // sorting the vector in descending order 
     for(auto i : v)
     {
-        cout<< i << " ";
+        cout<< i << " ";                  // print the vector elements
 
     }
 }
