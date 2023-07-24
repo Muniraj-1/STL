@@ -13,7 +13,7 @@ T2 second ;
 
    pair1(T1 x, T2 y)
    {
-       first = x;
+       first = x;                  // assign the value of x,y through constructor
        second =y;
    }
 
@@ -21,7 +21,7 @@ T2 second ;
    {
        cout<< "value before swapping"<<" "<<first <<" "<< second<<endl;
        auto temp = first;
-       T2 first = static_cast<T2>(second) ;
+       T2 first = static_cast<T2>(second) ;                            // cast if the other value are different data type
        T1 second =temp;
        cout<< "value after swapping"<<" "<<first <<" "<< second<<endl;
    }
